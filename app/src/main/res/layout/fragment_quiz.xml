@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background_black"
+    tools:context=".ui.main.QuizFragment" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerMainScreen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewPhotoQuizFrag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="19dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/userPhotoQuizFrag"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/header_image_bkg"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/welcomeTextQuizFrag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/placeholder_header_welcome"
+            android:textColor="@color/gold_yellow"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/cardViewPhotoQuizFrag"
+            app:layout_constraintEnd_toStartOf="@+id/logOutIconQuizFrag"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toEndOf="@+id/cardViewPhotoQuizFrag"
+            app:layout_constraintTop_toTopOf="@+id/cardViewPhotoQuizFrag"
+            app:layout_constraintVertical_bias="0.58000004" />
+
+        <ImageView
+            android:id="@+id/logOutIconQuizFrag"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/logout_header_selector"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/text_input_gray_background"
+        app:layout_constraintBottom_toBottomOf="@+id/headerMainScreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/selectListTextQuizFrag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/comfortaa_bold"
+                android:text="@string/text_select_list"
+                android:textColor="@color/vanilla_white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.04" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupQuizFrag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selectListTextQuizFrag"
+                app:layout_constraintVertical_bias="0.01999998">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/customSelectButtonQuizFrag"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_group_selector_bkg"
+                    android:button="@null"
+                    android:checked="true"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:includeFontPadding="false"
+                    android:minHeight="0dp"
+                    android:padding="10dp"
+                    android:text="@string/text_custom_select"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/radio_group_text_selector"
+                    android:textSize="14sp"
+                    tools:ignore="SmallSp,TouchTargetSizeCheck" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/randomSelectButtonQuizFrag"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_group_selector_bkg"
+                    android:button="@null"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:includeFontPadding="false"
+                    android:minHeight="0dp"
+                    android:padding="10dp"
+                    android:text="@string/text_random_select"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/radio_group_text_selector"
+                    android:textSize="14sp"
+                    tools:ignore="SmallSp,TouchTargetSizeCheck" />
+            </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/onlyFavoriteCheckBoxQuizFrag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:buttonTint="@color/gold_yellow"
+                android:fontFamily="@font/comfortaa_bold"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="@string/text_only_fav"
+                android:textColor="@color/gold_yellow"
+                android:textSize="10sp"
+                app:buttonTint="@color/gold_yellow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroupQuizFrag"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewListsQuizFrag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/text_input_gray_background"
+                android:maxHeight="400dp"
+                android:minHeight="300dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/onlyFavoriteCheckBoxQuizFrag"
+                app:layout_constraintVertical_bias="0.0">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/coverForRecyclerViewQuizFrag"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/text_input_gray_background"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/recyclerViewListsQuizFrag"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/recyclerViewListsQuizFrag">
+
+                <TextView
+                    android:id="@+id/randomSelectionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:text="@string/text_random_selection"
+                    android:textColor="@color/gray_transparent"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGroup2QuizFrag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerViewListsQuizFrag"
+                app:layout_constraintVertical_bias="0.16000003">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/engToAzeSelectQuizFrag"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_group_selector_bkg"
+                    android:button="@null"
+                    android:checked="true"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:includeFontPadding="false"
+                    android:minHeight="0dp"
+                    android:padding="10dp"
+                    android:text="@string/text_eng_to_aze"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/radio_group_text_selector"
+                    android:textSize="14sp"
+                    tools:ignore="SmallSp,TouchTargetSizeCheck" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/azeToEngSelectQuizFrag"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_group_selector_bkg"
+                    android:button="@null"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:includeFontPadding="false"
+                    android:minHeight="0dp"
+                    android:padding="10dp"
+                    android:text="@string/text_aze_to_eng"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/radio_group_text_selector"
+                    android:textSize="14sp"
+                    tools:ignore="SmallSp,TouchTargetSizeCheck" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/startQuizButtonQuizFrag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:backgroundTint="@color/gold_yellow"
+                android:fontFamily="@font/comfortaa_bold"
+                android:includeFontPadding="false"
+                android:padding="12dp"
+                android:text="@string/button_start_quiz"
+                android:textColor="@color/screen_background_black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup2QuizFrag" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

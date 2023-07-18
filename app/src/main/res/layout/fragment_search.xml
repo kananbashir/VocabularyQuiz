@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background_black"
+    tools:context=".ui.main.SearchFragment" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerMainScreen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewPhotoSearchFrag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="19dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/userPhotoSearchFrag"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/header_image_bkg"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/welcomeTextMainScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="@string/placeholder_header_welcome"
+            android:textColor="@color/gold_yellow"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/cardViewPhotoSearchFrag"
+            app:layout_constraintEnd_toStartOf="@+id/logOutIconSearchFrag"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toEndOf="@+id/cardViewPhotoSearchFrag"
+            app:layout_constraintTop_toTopOf="@+id/cardViewPhotoSearchFrag"
+            app:layout_constraintVertical_bias="0.58000004" />
+
+        <ImageView
+            android:id="@+id/logOutIconSearchFrag"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/logout_header_selector"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/text_input_gray_background"
+        app:layout_constraintBottom_toBottomOf="@+id/headerMainScreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupSearchFrag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:layout_constraintVertical_bias="0.02">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/checkSearchListSearchFrag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_group_selector_bkg"
+            android:button="@null"
+            android:checked="true"
+            android:fontFamily="@font/comfortaa_bold"
+            android:includeFontPadding="false"
+            android:minHeight="0dp"
+            android:padding="10dp"
+            android:text="@string/text_search_in_lists"
+            android:textAlignment="center"
+            android:textColor="@drawable/radio_group_text_selector"
+            android:textSize="9sp"
+            tools:ignore="SmallSp,TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/checkSearchFavoritesSearchFrag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_group_selector_bkg"
+            android:button="@null"
+            android:fontFamily="@font/comfortaa_bold"
+            android:includeFontPadding="false"
+            android:minHeight="0dp"
+            android:padding="10dp"
+            android:text="@string/text_search_in_favorites"
+            android:textAlignment="center"
+            android:textColor="@drawable/radio_group_text_selector"
+            android:textSize="9sp"
+            tools:ignore="SmallSp,TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/checkSearchWordsSearchFrag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/radio_group_selector_bkg"
+            android:button="@null"
+            android:fontFamily="@font/comfortaa_bold"
+            android:includeFontPadding="false"
+            android:minHeight="0dp"
+            android:padding="10dp"
+            android:text="@string/text_search_in_words"
+            android:textAlignment="center"
+            android:textColor="@drawable/radio_group_text_selector"
+            android:textSize="9sp"
+            tools:ignore="SmallSp,TouchTargetSizeCheck" />
+
+    </RadioGroup>
+
+    <SearchView
+        android:id="@+id/searchViewSearchFrag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/search_input_bkg"
+        android:queryBackground="@color/text_input_gray_background"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/hint_search"
+        android:searchIcon="@drawable/search_icon_selector"
+        android:theme="@style/Base.Widget.AppCompat.SearchView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupSearchFrag"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <TextView
+        android:id="@+id/searchResultsTextSearchFrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/placeholder_serch_results"
+        android:textColor="@color/gold_yellow"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchViewSearchFrag"
+        app:layout_constraintVertical_bias="0.03"
+        tools:ignore="SmallSp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewResultsSearchFrag"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="3dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchResultsTextSearchFrag" />
+</androidx.constraintlayout.widget.ConstraintLayout>

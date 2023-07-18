@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/vocab_list_item_bkg">
+
+    <ImageView
+        android:id="@+id/nonFavoriteButtonQuizVocabListItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/cont_desc_vocab_list_buttons"
+        android:paddingStart="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_favorite_non_fill"
+        tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/vocabListTitleQuizVocabListItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/comfortaa"
+        android:includeFontPadding="false"
+        android:text="@string/placeholder_custom_vocab_list"
+        android:textColor="@color/text_input_gray_background"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxQuizVocabListItem"
+        app:layout_constraintStart_toEndOf="@+id/nonFavoriteButtonQuizVocabListItem"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <CheckBox
+        android:id="@+id/checkBoxQuizVocabListItem"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="15dp"
+        android:background="@android:color/transparent"
+        android:button="@drawable/checkbox_selector"
+        android:paddingStart="0dp"
+
+        android:paddingEnd="0dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vocabListTitleQuizVocabListItem" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

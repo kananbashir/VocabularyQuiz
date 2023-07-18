@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="15dp"
+    android:background="@drawable/quiz_result_item_bkg">
+
+    <TextView
+        android:id="@+id/totalVocapListNumResultItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/placeholder_quiz_result_list"
+        android:textAlignment="center"
+        android:textColor="@color/text_input_gray_background"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/text_input_gray_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalVocapListNumResultItem"
+        app:layout_constraintVertical_bias="0.015" />
+
+    <TextView
+        android:id="@+id/totalWordsNumResultItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/placeholder_total_number_of_words"
+        android:textAlignment="center"
+        android:textColor="@color/text_input_gray_background"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/totalWrongsNumResultItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/totalWrongsNumResultItem"
+        app:layout_constraintTop_toBottomOf="@+id/divider2"
+        app:layout_constraintVertical_bias="0.04"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/totalWrongsNumResultItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/placeholder_wrong_answers"
+        android:textAlignment="center"
+        android:textColor="@color/text_input_gray_background"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/totalRightsNumResultItem"
+        app:layout_constraintStart_toStartOf="@+id/totalRightsNumResultItem"
+        app:layout_constraintTop_toBottomOf="@+id/totalWordsNumResultItem" />
+
+    <TextView
+        android:id="@+id/totalRightsNumResultItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/placeholder_right_answers"
+        android:textAlignment="center"
+        android:textColor="@color/text_input_gray_background"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalWrongsNumResultItem" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

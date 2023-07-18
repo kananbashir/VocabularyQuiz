@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">Vocabulary Quiz</string>
+
+    <string name="text_signin">Login</string>
+    <string name="text_sign_up">Sign up</string>
+    <string name="text_sign_in">Sign in</string>
+    <string name="text_quiz_results">Last results of quizzes</string>
+    <string name="text_search_in_lists">Search in lists</string>
+    <string name="text_search_in_favorites">Search in favorites</string>
+    <string name="text_search_in_words">Search in words</string>
+    <string name="text_select_list">Please select one or more list</string>
+    <string name="text_custom_select">Custom select</string>
+    <string name="text_random_select">Random select</string>
+    <string name="text_only_fav">Only favorites</string>
+    <string name="text_eng_to_aze">ENG to AZE</string>
+    <string name="text_aze_to_eng">AZE to ENG</string>
+    <string name="text_results">Results</string>
+    <string name="text_home">Home</string>
+    <string name="text_create_new_list">Create new list</string>
+    <string name="text_allowed_word_and_letter_limit">Name of the list (only 45 letters allowed)</string>
+    <string name="text_allowed_words">Add words (min 10 words)</string>
+    <string name="text_allowed_words_will_be_used">All words will be used</string>
+    <string name="text_info_game">Total 0 questions are going to be answered from 0 vocabulary lists</string>
+    <string name="text_random_selection">Random selection</string>
+    <string name="text_next">Next</string>
+    <string name="text_previous">Previous</string>
+    <string name="text_empty">Empty</string>
+
+    <string name="hint_username">Username</string>
+    <string name="hint_add_username">Add username</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_add_password">Add password</string>
+    <string name="hint_add_password_again">Add password again</string>
+    <string name="hint_search">Search</string>
+    <string name="hint_add_list_name">Add list name</string>
+    <string name="hint_add_word_aze">Word - AZE</string>
+    <string name="hint_add_word_eng">Word - ENG</string>
+
+    <string name="button_sign_in">Sign in</string>
+    <string name="button_register">Register</string>
+    <string name="button_add_photo">Add photo</string>
+    <string name="button_start_quiz">Start quiz</string>
+    <string name="button_answer_1">ANSWER 1</string>
+    <string name="button_answer_2">ANSWER 2</string>
+    <string name="button_answer_3">ANSWER 3</string>
+    <string name="button_answer_4">ANSWER 4</string>
+    <string name="button_create_new_list">Create new list</string>
+    <string name="button_save">Save</string>
+    <string name="button_start">Start</string>
+    <string name="button_discard">Discard</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_finish">Finish</string>
+
+    <string name="cont_desc_password_hint_icon">Password hint on or off</string>
+    <string name="cont_desc_nav_to_signup">Navigate to sign up screen icon</string>
+    <string name="cont_desc_preview_photo">Preview photo of an user</string>
+    <string name="cont_desc_create_new">Create new button image</string>
+    <string name="cont_desc_delete_word">To delete a word</string>
+    <string name="cont_desc_vocab_list_buttons">Vocabulary list buttons</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_favorites">Favorites</string>
+    <string name="menu_quiz">Quiz</string>
+
+    <string name="placeholder_header_welcome">Welcome, User</string>
+    <string name="placeholder_all_vocab_list">All vocabulary lists (0)</string>
+    <string name="placeholder_all_favorite_list">All favorite lists (0)</string>
+    <string name="placeholder_serch_results">Total 0 results found</string>
+    <string name="placeholder_word">WORD</string>
+    <string name="placeholder_prog_bar">0/0</string>
+    <string name="placeholder_total_questions">Total questions: 0</string>
+    <string name="placeholder_wrong_answers">Wrong answers: 0</string>
+    <string name="placeholder_right_answers">Right answers: 0</string>
+    <string name="placeholder_not_answered">Not answered: 0</string>
+    <string name="placeholder_total_number_of_words">Number of words: 0</string>
+    <string name="placeholder_total_words">Total 1 words added</string>
+    <string name="placeholder_total_number_words">Total number of words (0)</string>
+    <string name="placeholder_list_title">List title</string>
+    <string name="placeholder_custom_vocab_list">Custom vocabulary list</string>
+    <string name="placeholder_word_list_item_num">1.</string>
+    <string name="placeholder_word_list_item_word_aze">Word AZE</string>
+    <string name="placeholder_word_list_item_divider"> - </string>
+    <string name="placeholder_word_list_item_word_eng">Word ENG</string>
+    <string name="placeholder_word_list_prior_item_word">Word</string>
+    <string name="placeholder_quiz_result_list">0 vocabulary list</string>
+    <string name="placeholder_list_name">Custom vocablulary list name</string>
+    <string name="placeholder_list_word">Custom vocablulary list word</string>
+</resources>

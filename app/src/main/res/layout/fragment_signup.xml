@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background_black"
+    tools:context=".ui.login.SignupFragment">
+
+    <TextView
+        android:id="@+id/textSignupSignupFrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/text_sign_up"
+        android:textColor="@color/gold_yellow"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="68dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSignupSignupFrag"
+        app:layout_constraintVertical_bias="0.053"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <ImageView
+        android:id="@+id/previewImageSignupFrag"
+        android:layout_width="136dp"
+        android:layout_height="136dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/singup_preview_image_bkg"
+        android:contentDescription="@string/cont_desc_preview_photo"
+        android:cropToPadding="true"
+        android:scaleType="centerCrop"
+ />
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/addPhotoButtonSignupFrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gold_yellow"
+        android:fontFamily="@font/comfortaa"
+        android:includeFontPadding="false"
+        android:text="@string/button_add_photo"
+        android:textColor="@color/screen_background_black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewPhoto"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <EditText
+        android:id="@+id/inputUsernameSigninFrag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="65dp"
+        android:autofillHints=""
+        android:background="@drawable/text_input_bkg"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa"
+        android:gravity="center_vertical"
+        android:hint="@string/hint_add_username"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:paddingStart="20dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="15dp"
+        android:textColor="@color/gold_yellow"
+        android:textColorHint="@color/text_input_hint_brown"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addPhotoButtonSignupFrag"
+        app:layout_constraintVertical_bias="0.050000012"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/inputPasswordSigninFrag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="65dp"
+        android:autofillHints=""
+        android:background="@drawable/text_input_bkg"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa"
+        android:gravity="center_vertical"
+        android:hint="@string/hint_add_password"
+        android:includeFontPadding="false"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingStart="20dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="15dp"
+        android:textColor="@color/gold_yellow"
+        android:textColorHint="@color/text_input_hint_brown"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputUsernameSigninFrag"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/inputPasswordAgainSignupFrag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="65dp"
+        android:autofillHints=""
+        android:background="@drawable/text_input_bkg"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa"
+        android:gravity="center_vertical"
+        android:hint="@string/hint_add_password_again"
+        android:includeFontPadding="false"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingStart="20dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="15dp"
+        android:textColor="@color/gold_yellow"
+        android:textColorHint="@color/text_input_hint_brown"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputPasswordSigninFrag"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/signupButtonSigninFrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gold_yellow"
+        android:fontFamily="@font/comfortaa"
+        android:includeFontPadding="false"
+        android:text="@string/button_register"
+        android:textColor="@color/screen_background_black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputPasswordAgainSignupFrag"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <ImageView
+        android:id="@+id/iconPasswordHintOnSigninFrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:contentDescription="@string/cont_desc_password_hint_icon"
+        android:src="@drawable/ic_password_hint_on"
+        app:layout_constraintBottom_toBottomOf="@+id/inputPasswordSigninFrag"
+        app:layout_constraintStart_toEndOf="@+id/inputPasswordSigninFrag"
+        app:layout_constraintTop_toTopOf="@+id/inputPasswordSigninFrag" />
+
+    <ImageView
+        android:id="@+id/iconPasswordHintOffSigninFrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:contentDescription="@string/cont_desc_password_hint_icon"
+        android:src="@drawable/ic_password_hint_off"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/inputPasswordSigninFrag"
+        app:layout_constraintStart_toEndOf="@+id/inputPasswordSigninFrag"
+        app:layout_constraintTop_toTopOf="@+id/inputPasswordSigninFrag" />
+
+    <LinearLayout
+        android:id="@+id/navSigninButtonSignupFrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/iconSignupSinginFrag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/cont_desc_nav_to_signup"
+            android:src="@drawable/ic_point_arrow_left"/>
+
+        <TextView
+            android:id="@+id/textSignupSigninFrag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:includeFontPadding="false"
+            android:text="@string/text_sign_in"
+            android:textColor="@color/gold_yellow"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

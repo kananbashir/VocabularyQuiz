@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background_black"
+    tools:context=".ui.game.GameFragment">
+
+    <ProgressBar
+        android:id="@+id/progressBarGameFrag"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="75dp"
+        android:progressTint="@color/gold_yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/progressBarTextGameFrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:includeFontPadding="false"
+        android:padding="0dp"
+        android:text="@string/placeholder_prog_bar"
+        android:textColor="@color/vanilla_white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBarGameFrag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toEndOf="@+id/progressBarGameFrag"
+        app:layout_constraintTop_toTopOf="@+id/progressBarGameFrag" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/text_input_gray_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarGameFrag">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="50dp">
+
+            <TextView
+                android:id="@+id/wordQuestionGameFrag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/comfortaa_bold"
+                android:text="@string/placeholder_word"
+                android:textAlignment="center"
+                android:textColor="@color/vanilla_white"
+                android:textSize="34sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView"
+        app:layout_constraintVertical_bias="0.13999999">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/answer1radioButtonGameFrag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/game_radio_group_selector_bkg"
+            android:button="@null"
+            android:fontFamily="@font/comfortaa_bold"
+            android:includeFontPadding="false"
+            android:minHeight="0dp"
+            android:padding="10dp"
+            android:text="@string/button_answer_1"
+            android:textAlignment="center"
+            android:textSize="22dp" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/answer2radioButtonGameFrag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/game_radio_group_selector_bkg"
+            android:button="@null"
+            android:fontFamily="@font/comfortaa_bold"
+            android:includeFontPadding="false"
+            android:minHeight="0dp"
+            android:padding="10dp"
+            android:text="@string/button_answer_2"
+            android:textAlignment="center"
+            android:textSize="22dp" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/answer3radioButtonGameFrag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/game_radio_group_selector_bkg"
+            android:button="@null"
+            android:fontFamily="@font/comfortaa_bold"
+            android:includeFontPadding="false"
+            android:minHeight="0dp"
+            android:padding="10dp"
+            android:text="@string/button_answer_3"
+            android:textAlignment="center"
+            android:textSize="22dp" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/answer4radioButtonGameFrag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/game_radio_group_selector_bkg"
+            android:button="@null"
+            android:fontFamily="@font/comfortaa_bold"
+            android:includeFontPadding="false"
+            android:minHeight="0dp"
+            android:padding="10dp"
+            android:text="@string/button_answer_4"
+            android:textAlignment="center"
+            android:textSize="22dp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/finishButtonGameFrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gold_yellow"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/button_finish"
+        android:textColor="@color/screen_background_black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.36" />
+
+    <LinearLayout
+        android:id="@+id/nextButtonGameFrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/textNextGameFrag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:includeFontPadding="false"
+            android:text="@string/text_next"
+            android:textColor="@color/gold_yellow"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iconNextGameFrag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/cont_desc_nav_to_signup"
+            android:src="@drawable/ic_point_arrow_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/previousButtonGameFrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/iconPreviousGameFrag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/cont_desc_nav_to_signup"
+            android:src="@drawable/ic_point_arrow_left" />
+
+        <TextView
+            android:id="@+id/textPreviousGameFrag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:includeFontPadding="false"
+            android:text="@string/text_previous"
+            android:textColor="@color/gold_yellow"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

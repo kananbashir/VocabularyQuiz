@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp">
+
+    <EditText
+        android:id="@+id/addWordAzeItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="2"
+        android:autofillHints=""
+        android:background="@drawable/text_input_bkg"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa"
+        android:gravity="center_vertical"
+        android:hint="@string/hint_add_word_aze"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:paddingStart="20dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="15dp"
+        android:textColor="@color/gold_yellow"
+        android:textColorHint="@color/text_input_hint_brown"
+        android:textSize="15sp"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <EditText
+        android:id="@+id/addWordEngItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:autofillHints=""
+        android:background="@drawable/text_input_bkg"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa"
+        android:gravity="center_vertical"
+        android:hint="@string/hint_add_word_eng"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:paddingStart="20dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="15dp"
+        android:textColor="@color/gold_yellow"
+        android:textColorHint="@color/text_input_hint_brown"
+        android:textSize="15sp"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <ImageButton
+        android:id="@+id/deleteWordButtonItemA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/delete_word_item_selector"
+        android:contentDescription="@string/cont_desc_delete_word"
+        android:layout_marginStart="10dp"
+        android:minWidth="28dp"
+        android:minHeight="28dp"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+</LinearLayout>

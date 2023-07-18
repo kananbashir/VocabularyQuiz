@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/LogginSession">
+
+    <navigation android:id="@+id/LogginSession"
+        app:startDestination="@id/signinFragment">
+        <fragment
+            android:id="@+id/signinFragment"
+            android:name="com.example.vocabularyquiz.ui.login.SigninFragment"
+            android:label="fragment_signin"
+            tools:layout="@layout/fragment_signin">
+            <action
+                android:id="@+id/action_signinFragment_to_signupFragment"
+                app:destination="@id/signupFragment" />
+            <action
+                android:id="@+id/action_signinFragment_to_homeFragment"
+                app:destination="@id/MainSession" />
+        </fragment>
+        <fragment
+            android:id="@+id/signupFragment"
+            android:name="com.example.vocabularyquiz.ui.login.SignupFragment"
+            android:label="fragment_signup"
+            tools:layout="@layout/fragment_signup">
+            <action
+                android:id="@+id/action_signupFragment_to_signinFragment"
+                app:destination="@id/signinFragment" />
+        </fragment>
+    </navigation>
+    <navigation android:id="@+id/MainSession"
+        app:startDestination="@id/homeFragment">
+        <fragment
+            android:id="@+id/homeFragment"
+            android:name="com.example.vocabularyquiz.ui.main.HomeFragment"
+            android:label="fragment_home"
+            tools:layout="@layout/fragment_home" />
+        <fragment
+            android:id="@+id/searchFragment"
+            android:name="com.example.vocabularyquiz.ui.main.SearchFragment"
+            android:label="fragment_search"
+            tools:layout="@layout/fragment_search" />
+        <fragment
+            android:id="@+id/favoritesFragment"
+            android:name="com.example.vocabularyquiz.ui.main.FavoritesFragment"
+            android:label="fragment_favorites"
+            tools:layout="@layout/fragment_favorites" />
+        <fragment
+            android:id="@+id/quizFragment"
+            android:name="com.example.vocabularyquiz.ui.main.QuizFragment"
+            android:label="fragment_quiz"
+            tools:layout="@layout/fragment_quiz" />
+        <action
+            android:id="@+id/action_global_createFragment"
+            app:destination="@id/createFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_global_LogginSession"
+            app:destination="@id/LogginSession" />
+        <action
+            android:id="@+id/action_global_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_global_editFragment"
+            app:destination="@id/editFragment" />
+        <action
+            android:id="@+id/action_global_GameSession"
+            app:destination="@id/GameSession" />
+    </navigation>
+    <fragment
+        android:id="@+id/createFragment"
+        android:name="com.example.vocabularyquiz.ui.other.CreateFragment"
+        android:label="fragment_create"
+        tools:layout="@layout/fragment_create" >
+        <action
+            android:id="@+id/action_createFragment_to_MainSession"
+            app:destination="@id/MainSession" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.vocabularyquiz.ui.other.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_MainSession"
+            app:destination="@id/MainSession" />
+        <action
+            android:id="@+id/action_detailsFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.vocabularyquiz.ui.other.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" >
+        <action
+            android:id="@+id/action_editFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_editFragment_to_MainSession"
+            app:destination="@id/MainSession" />
+    </fragment>
+    <navigation android:id="@+id/GameSession"
+        app:startDestination="@id/gamePriorFragment">
+        <fragment
+            android:id="@+id/resultFragment"
+            android:name="com.example.vocabularyquiz.ui.game.ResultFragment"
+            android:label="fragment_result"
+            tools:layout="@layout/fragment_result" >
+            <action
+                android:id="@+id/action_resultFragment_to_MainSession"
+                app:destination="@id/MainSession" />
+        </fragment>
+        <fragment
+            android:id="@+id/gamePriorFragment"
+            android:name="com.example.vocabularyquiz.ui.game.GamePriorFragment"
+            android:label="fragment_game_prior"
+            tools:layout="@layout/fragment_game_prior" >
+            <action
+                android:id="@+id/action_gamePriorFragment_to_gameFragment2"
+                app:destination="@id/gameFragment2" />
+            <action
+                android:id="@+id/action_gamePriorFragment_to_MainSession"
+                app:destination="@id/MainSession" />
+        </fragment>
+        <fragment
+            android:id="@+id/gameFragment2"
+            android:name="com.example.vocabularyquiz.ui.game.GameFragment"
+            android:label="fragment_game"
+            tools:layout="@layout/fragment_game" >
+            <action
+                android:id="@+id/action_gameFragment2_to_resultFragment"
+                app:destination="@id/resultFragment" />
+            <action
+                android:id="@+id/action_gameFragment2_to_MainSession"
+                app:destination="@id/MainSession" />
+        </fragment>
+        <action
+            android:id="@+id/action_global_MainSession"
+            app:destination="@id/MainSession" />
+    </navigation>
+</navigation>
