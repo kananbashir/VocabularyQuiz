@@ -21,7 +21,7 @@ VocabularyQuiz is a mobile app designed to help users improve their vocabulary s
 - Room Database for data persistence
 - RecyclerView for displaying vocabulary lists and quiz questions
 - Gson library for JSON serialization/deserialization
-- Glide library for image loading (it didn't worked with different fragments)
+- Glide library for image loading (it didn't work with different fragments)
 
 ## Dependencies
 - AndroidX
